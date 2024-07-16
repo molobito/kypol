@@ -35,6 +35,6 @@ spec:
           - name: allContainers
             expression: "(object.spec.containers + (has(object.spec.initContainers) ? object.spec.initContainers : []) + (has(object.spec.ephemeralContainers) ? object.spec.ephemeralContainers : []))"
         expressions:
-          - expression: "variables.allContainers.all(container, container.image.startsWith('registry.hub.docker.com/') || container.image.matches('\d{12}\.dkr\.ecr\.us-east-1\.amazonaws\.com/'))"
+          - expression: "variables.allContainers.all(container, container.image.startsWith('registry.hub.docker.com/') || container.image.matches('\\d{12}\\.dkr\\.ecr\\.us-east-1\\.amazonaws\\.com/'))"
             message: "Unknown image registry."
 
