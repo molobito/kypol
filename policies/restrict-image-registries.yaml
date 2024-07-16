@@ -17,7 +17,7 @@ metadata:
       registry `registry.hub.docker.com` or `registry.jesusinthecloud.com`. Use of this 
       policy requires customization to define your allowable registries.
 spec:
-  validationFailureAction: Audit
+  validationFailureAction: Enforce
   background: true
   rules:
   - name: validate-registries
