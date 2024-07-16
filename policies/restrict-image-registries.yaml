@@ -14,8 +14,8 @@ metadata:
       scanned and secured, representing a high degree of risk. Requiring use of known, 
       approved registries helps reduce threat exposure by ensuring image pulls only come 
       from them. This policy validates that container images only originate from the 
-      registry `registry.hub.docker.com` or `<aws_account>.dkr.ecr.us-east-1.amazonaws.com/`. Use of this 
-      policy requires customization to define your allowable registries.
+      registry `registry.hub.docker.com` or `282527170177.dkr.ecr.us-east-1.amazonaws.com`. 
+      Use of this policy requires customization to define your allowable registries.
 spec:
   validationFailureAction: Enforce
   background: true
@@ -35,6 +35,6 @@ spec:
           - name: allContainers
             expression: "(object.spec.containers + (has(object.spec.initContainers) ? object.spec.initContainers : []) + (has(object.spec.ephemeralContainers) ? object.spec.ephemeralContainers : []))"
         expressions:
-          - expression: "variables.allContainers.all(container, container.image.startsWith('registry.hub.docker.com/') || container.image.matches('\\d{12}\\.dkr\\.ecr\\.us-east-1\\.amazonaws\\.com/'))"
+          - expression: "variables.allContainers.all(container, container.image.startsWith('registry.hub.docker.com/') || container.image.startsWith('282527170177.dkr.ecr.us-east-1.amazonaws.com'))"
             message: "Unknown image registry."
 
