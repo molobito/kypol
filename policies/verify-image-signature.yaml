@@ -1,7 +1,7 @@
 apiVersion: kyverno.io/v2beta1
 kind: ClusterPolicy
 metadata:
-  name: verify-image-signature-v2
+  name: verify-image-signature
   annotations:
     policies.kyverno.io/title: Verify Container Image Crypto Signature
     policies.kyverno.io/category: Custom Policy
@@ -29,7 +29,6 @@ spec:
         - "282527170177.dkr.ecr.us-east-1.amazonaws.com/*"
         skipImageReferences:
         - "ghcr.io/*"
-        mutateDigest: false
         attestors:
         - count: 1
           entries:
