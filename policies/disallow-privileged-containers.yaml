@@ -27,7 +27,6 @@ spec:
             - CREATE
             - UPDATE
       validate:
-        message: Pods must not be configured with securityContext parameter 'privileged = true'
         cel:
           expressions:
             - expression: >-
