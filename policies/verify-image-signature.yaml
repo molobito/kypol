@@ -29,6 +29,7 @@ spec:
         - "282527170177.dkr.ecr.us-east-1.amazonaws.com/*"
         skipImageReferences:
         - "ghcr.io/*"
+        mutateDigest: false
         attestors:
         - count: 1
           entries:
