@@ -29,8 +29,6 @@ spec:
         - "282527170177.dkr.ecr.us-east-1.amazonaws.com/*"
         skipImageReferences:
         - "ghcr.io/*"
-#       registry: "282527170177.dkr.ecr.us-east-1.amazonaws.com"
-#       verifyDigest: true
         attestors:
         - count: 1
           entries:
@@ -50,6 +48,7 @@ spec:
                 o3Wmu4Dc5slV9GGB1toIdJbe5QNYtJimhY4SNwWMnRuwT53rdzuhOLIlX22+pey/
                 pQD8CdvkBjc9Bevkr94SahECAwEAAQ==
                 -----END PUBLIC KEY-----
-#             rekor:
-#               ignoreTlog: true
-#               url: https://rekor.sigstore.dev
+              rekor:
+                ignoreTlog: true
+              ctlog:
+                ifnoreSCT: true
