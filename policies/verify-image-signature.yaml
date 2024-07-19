@@ -50,5 +50,6 @@ spec:
                 -----END PUBLIC KEY-----
               rekor:
                 ignoreTlog: true
+                url: https://rekor.sigstore.dev
               ctlog:
                 ifnoreSCT: true
