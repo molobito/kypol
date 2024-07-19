@@ -29,8 +29,8 @@ spec:
         - "282527170177.dkr.ecr.us-east-1.amazonaws.com/*"
         skipImageReferences:
         - "ghcr.io/*"
-        registry: "282527170177.dkr.ecr.us-east-1.amazonaws.com"
-        verifyDigest: true
+#       registry: "282527170177.dkr.ecr.us-east-1.amazonaws.com"
+#       verifyDigest: true
         attestors:
         - count: 1
           entries:
