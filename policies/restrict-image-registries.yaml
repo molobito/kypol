@@ -17,7 +17,7 @@ metadata:
       registry `registry.hub.docker.com` or `282527170177.dkr.ecr.us-east-1.amazonaws.com`. 
       Use of this policy requires customization to define your allowable registries.
 spec:
-  validationFailureAction: Enforce
+  validationFailureAction: Audit
   background: true
   rules:
   - name: validate-registries
